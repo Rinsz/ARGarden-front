@@ -48,3 +48,14 @@
     gap: 10px;
   }
 }
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &_image {
+    width: 17px;
+    height: 13px;
+  }
+}

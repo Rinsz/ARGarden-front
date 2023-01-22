@@ -1,0 +1,21 @@
+.circle {
+  position: absolute;
+  background: rgba(165, 153, 250, 0.1);
+  z-index: -1;
+
+  &_1 {
+    width: 1300px;
+    height: 1300px;
+    border-radius: 100%;
+    top: -400px;
+    left: -400px;
+  }
+
+  &_2 {
+    width: 700px;
+    height: 700px;
+    border-radius: 100%;
+    top: 100px;
+    left: 1400px;
+  }
+}

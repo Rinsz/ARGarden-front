@@ -1,0 +1,14 @@
+h1, h2, h3, div, span, p, ul, ol, li, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,54 @@
+.b4 {
+  margin-bottom: 4px;
+}
+
+.b8 {
+  margin-bottom: 8px;
+}
+
+.b12 {
+  margin-bottom: 12px;
+}
+
+.b16 {
+  margin-bottom: 16px;
+}
+
+.b32 {
+  margin-bottom: 32px;
+}
+
+.b64 {
+  margin-bottom: 64px;
+}
+
+.b128 {
+  margin-bottom: 128px;
+}
+
+//Colors
+
+$baseColor: #6857DD;
+
+@mixin mainColor {
+  color: $baseColor;
+}
+
+@mixin mainBackgroundColor {
+  background-color: $baseColor;
+}
+
+.mainColor {
+  @include mainColor;
+}
+
+.mainBackgroundColor {
+  @include mainBackgroundColor;
+}
+
+//Font
+
+.nunito {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}

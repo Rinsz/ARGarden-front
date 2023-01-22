@@ -1,0 +1,50 @@
+@import "../../Typography.module";
+
+.footer {
+  &_blocks {
+    display: flex;
+    padding-bottom: 45px;
+    border-bottom: 1px solid $baseColor;
+  }
+
+  &_wrapper {
+    padding: 40px 300px 0 300px;
+    background-color: #ecebff;
+    margin-top: 100px;
+  }
+
+  &_copyright {
+    text-align: center;
+    color: #676767;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 15px 0;
+  }
+}
+
+.block {
+  display: inline-block;
+  float: right;
+
+  &_wrapper {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23.5px;
+  margin-bottom: 20px;
+}
+
+.element {
+  font-weight: 400;
+
+  &s_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: right;
+  font-weight: 600;
+  font-size: 16px;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.button {
+  text-decoration: none;
+  color: black;
+
+  &Blue {
+    text-decoration: none;
+    color: #6857DD;
+    border: 2px solid #6857DD;
+    border-radius: 10px;
+    padding: 10px 40px;
+  }
+
+  &:hover {
+    border-bottom: 2px solid black;
+  }
+}

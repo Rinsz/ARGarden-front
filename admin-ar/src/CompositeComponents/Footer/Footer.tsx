@@ -1,6 +1,4 @@
 import styles from "./Footer.module.scss";
-import t from "../../Typography.module.scss";
-import { cn } from "../../classnames";
 
 export function Footer() {
   return (

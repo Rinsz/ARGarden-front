@@ -1,6 +1,5 @@
 import styles from "./Layout.module.scss";
-import { Link, Outlet } from "react-router-dom";
-import t from "../../Typography.module.scss";
+import { Outlet } from "react-router-dom";
 import { NavBar } from "../NavBar/NavBar";
 import { Circles } from "../Circles/Circles";
 import { Footer } from "../Footer/Footer";

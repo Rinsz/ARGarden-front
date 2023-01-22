@@ -21,3 +21,42 @@
   font-size: 18px;
   margin-bottom: 400px;
 }
+
+.what_we_offer_text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.feature {
+  background: #FBFBFB;
+  box-shadow: 0 6px 40px rgb(184, 181, 255);
+  border-radius: 12.9729px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  padding: 45px 30px;
+
+  &_heading {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23.5px;
+  }
+
+  &_text {
+    text-align: center;
+  }
+
+  &_image {
+    height: 170px;
+    width: 170px;
+  }
+
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

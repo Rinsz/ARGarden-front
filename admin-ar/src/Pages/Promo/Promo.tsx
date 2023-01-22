@@ -19,10 +19,8 @@ export function Promo() {
         Узнать больше
       </div>
       <Separator width={70} height={8} />
-      <div className={cn(styles.what_we_offer_text, t.b128)}>
-        Что мы предлагаем...
-      </div>
-      <div className={styles.feature_wrapper}>
+      <div className={cn(styles.heading, t.b128)}>Что мы предлагаем...</div>
+      <div className={cn(styles.feature_wrapper, t.b128)}>
         <FeatureBlock
           svgName={"design"}
           heading={"Удобный дизайн"}
@@ -43,10 +41,29 @@ export function Promo() {
           description={
             <div>
               Думаете, что для такого приложения нужен мощный смартфон или
-              профессиональная камера? Ошибаетесь.<br/>Мы поддерживаем любые
-              устройства.
+              профессиональная камера? Ошибаетесь.
+              <br />
+              Мы поддерживаем любые устройства.
             </div>
           }
+        />
+      </div>
+      <Separator width={68} height={8} />
+      <div className={cn(styles.heading, t.b64)}>Отзывы пользоваталей</div>
+      <div className={styles.feedbacks_container}>
+        <Comment
+          name={"Михаил Шестеров"}
+          text={
+            "Это приложение - просто находка. Я всегда любил приходить в свой сад после того, как отвечал в личку студентам, но мне всегда чего-то не хватало в своём саду. Сказал это приложение, и мне уже не оставалось ничего, кроме как готовиться к обновлению своего любимого места отдыха."
+          }
+          avatarName={"misha"}
+        />
+        <Comment
+          name={"Дмитрий Гмыра"}
+          text={
+            "Сначала скачал, чтобы просто побаловаться у родителей в огороде, но затем они увидели, как я превращаю обычное серое место в нечто прекрасное, и они попросили сохранить изображение нового сада, и уже вижу, как они превращают это место в райский сад."
+          }
+          avatarName={"dima"}
         />
       </div>
     </>
@@ -71,6 +88,38 @@ function FeatureBlock(props: FeatureBlockProps) {
       />
       <div className={styles.feature_heading}>{heading}</div>
       <div className={cn(styles.feature_text, t.nunito)}>{description}</div>
+    </div>
+  );
+}
+
+interface CommentProps {
+  name: string;
+  text: string;
+  avatarName: string;
+}
+
+function Comment(props: CommentProps) {
+  const { name, text, avatarName } = props;
+
+  return (
+    <div className={styles.feedback}>
+      <div className={styles.feedback_person}>
+        <img className={styles.feedback_person_image} alt={avatarName} src={`./Resources/Feedback/${avatarName}.jpg`} />
+        <div className={cn(t.nunito, styles.feedback_person_name)}>{name}</div>
+      </div>
+      <div className={styles.feedback_description}>
+        <div className={cn(t.nunito, t.b16)}>{text}</div>
+        <div className={styles.feedback_stars_container}>
+          {[0, 1, 2, 3, 4].map((i) => (
+            <img
+              className={styles.feedback_star}
+              key={i}
+              alt={"star"}
+              src={"./Resources/Feedback/star.svg"}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

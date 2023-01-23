@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  ar-garden-land:
+    image: cr.yandex/crpbb7ps662qtb3cboho/ar-garden-land:0.1.0
+    container_name: 'ar-garden-land'
+    ports: 
+      - "80:3000"

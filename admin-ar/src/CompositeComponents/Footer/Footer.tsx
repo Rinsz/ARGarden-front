@@ -1,6 +1,4 @@
 import styles from "./Footer.module.scss";
-import t from "../../Typography.module.scss";
-import { cn } from "../../classnames";
 
 export function Footer() {
   return (
@@ -19,7 +17,22 @@ export function Footer() {
         />
         <Block
           heading={"Контакты"}
-          elements={["AR_Garden@gmail.com", "8-800-555-35-35"]}
+          elements={[
+            <div className={styles.contact}>
+              <img
+                className={styles.contact_image}
+                src={"./Resources/Contacts/mail.svg"}
+              />
+              <p>AR_Garden@gmail.com</p>
+            </div>,
+            <div className={styles.contact}>
+              <img
+                className={styles.contact_image}
+                src={"./Resources/Contacts/phone.svg"}
+              />
+              <p>8-800-555-35-35</p>
+            </div>,
+          ]}
         />
       </div>
       <div className={styles.footer_copyright}>
@@ -31,7 +44,7 @@ export function Footer() {
 
 interface BlockProps {
   heading: string;
-  elements: string[];
+  elements: string[] | JSX.Element[];
 }
 
 function Block(props: BlockProps) {
@@ -42,9 +55,9 @@ function Block(props: BlockProps) {
       <div className={styles.block}>
         <div className={styles.heading}>{heading}</div>
         <div className={styles.elements_wrapper}>
-          {elements.map((text, i) => (
+          {elements.map((x, i) => (
             <div key={i} className={styles.element}>
-              {text}
+              {x}
             </div>
           ))}
         </div>

@@ -5,6 +5,6 @@ export function Circles() {
     return <>
         <div className={cn(styles.circle, styles.circle_1)}></div>
         <div className={cn(styles.circle, styles.circle_2)}></div>
-        <div className={styles.circle}></div>
+        <div className={cn(styles.circle, styles.circle_3)}></div>
     </>
 }

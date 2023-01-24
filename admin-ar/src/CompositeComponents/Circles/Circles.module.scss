@@ -1,29 +1,35 @@
 .circle {
-  position: absolute;
+  position: relative;
   background: rgba(165, 153, 250, 0.1);
   z-index: -1;
+
+  &s_wrapper {
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+  }
 
   &_1 {
     width: 1300px;
     height: 1300px;
     border-radius: 100%;
-    top: -400px;
-    left: -400px;
+    top: -900px;
+    left: -1600px;
   }
 
   &_2 {
     width: 700px;
     height: 700px;
     border-radius: 100%;
-    top: 100px;
-    left: 1400px;
+    top: -1300px;
+    left: 600px;
   }
 
   &_3 {
     width: 700px;
     height: 1000px;
     border-radius: 300px;
-    top: 1200px;
-    left: -300px;
+    top: -900px;
+    left: -1300px;
   }
 }

@@ -8,6 +8,15 @@ body {
   overflow-x: hidden;
 }
 
+body, #root {
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

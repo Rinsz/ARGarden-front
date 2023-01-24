@@ -58,9 +58,16 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+  color: black;
 
   &_image {
     width: 17px;
     height: 13px;
+  }
+
+  &_text:hover {
+    color: $baseColor;
+    text-decoration: underline;
   }
 }

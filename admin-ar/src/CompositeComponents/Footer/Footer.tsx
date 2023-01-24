@@ -19,20 +19,23 @@ export function Footer() {
           <Block
             heading={"Контакты"}
             elements={[
-              <div className={styles.contact}>
+              <a
+                className={styles.contact}
+                href={"mailto:contact.argarden@gmail.com"}
+              >
                 <img
                   className={styles.contact_image}
                   src={"./Resources/Contacts/mail.svg"}
                 />
-                <p>AR_Garden@gmail.com</p>
-              </div>,
-              <div className={styles.contact}>
+                <p className={styles.contact_text}>contact.argarden@gmail.com</p>
+              </a>,
+              <a className={styles.contact} href={"tel:+78005553535"}>
                 <img
                   className={styles.contact_image}
                   src={"./Resources/Contacts/phone.svg"}
                 />
-                <p>8-800-555-35-35</p>
-              </div>,
+                <p className={styles.contact_text}>8-800-555-35-35</p>
+              </a>,
             ]}
           />
         </div>

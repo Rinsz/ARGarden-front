@@ -20,7 +20,7 @@ export function Promo() {
       </div>
       <Separator width={70} height={8} />
       <div className={cn(styles.heading, t.b128)}>Что мы предлагаем...</div>
-      <div className={cn(styles.feature_wrapper, t.b128)}>
+      <div className={styles.feature_wrapper}>
         <FeatureBlock
           svgName={"design"}
           heading={"Удобный дизайн"}
@@ -48,6 +48,7 @@ export function Promo() {
           }
         />
       </div>
+      <AboutApp />
       <Separator width={68} height={8} />
       <div className={cn(styles.heading, t.b64)}>Отзывы пользоваталей</div>
       <div className={styles.feedbacks_container}>
@@ -70,6 +71,58 @@ export function Promo() {
   );
 }
 
+function AboutApp() {
+  return (
+    <div className={styles.aboutApp_wrapper}>
+      <div className={styles.aboutApp_withImage}>
+        <img
+          className={styles.aboutApp_image}
+          src={"./Resources/PromoPage/AboutApp/example.jpg"}
+          alt={"Пример"}
+        />
+        <div className={styles.aboutApp}>
+          <Separator width={68} height={8} />
+          <div className={cn(styles.heading, t.b64)}>О приложении</div>
+          <p className={cn(styles.aboutApp_description, t.nunito)}>
+            Наша миссия - помочь вам воплотить все ваши идеи в реальность. Если
+            вы давно хотите создать или украсить ваш сад, то наше приложение -
+            это то, что вам нужно. Несколько сотен готовых моделей, гибкая
+            настройка позволят вам добиться точнейшей детализации вашей идеи. От
+            вас лишь требуется наличие смартфона с камерой, а остальное - за
+            нами.
+          </p>
+        </div>
+      </div>
+      <div className={styles.statistic_wrapper}>
+        <StatisticElement number={"100"} description={"Готовых моделей"} />
+        <Separator width={2} color={"white"} />
+        <StatisticElement
+          number={"100к"}
+          description={"Довольных пользователей"}
+        />
+        <Separator width={2} color={"white"} />
+        <StatisticElement number={"150к"} description={"Созданных садов"} />
+      </div>
+    </div>
+  );
+}
+
+interface StatisticElementProps {
+  number: string;
+  description: string;
+}
+
+function StatisticElement(props: StatisticElementProps) {
+  const { number, description } = props;
+
+  return (
+    <div>
+      <div className={styles.statistic_number}>{number}+</div>
+      <div className={styles.statistic_description}>{description}</div>
+    </div>
+  );
+}
+
 interface FeatureBlockProps {
   svgName: string;
   heading: string;
@@ -82,7 +135,7 @@ function FeatureBlock(props: FeatureBlockProps) {
   return (
     <div className={styles.feature}>
       <img
-        src={`./Resources/WhatWeOffer/${svgName}.svg`}
+        src={`./Resources/PromoPage/WhatWeOffer/${svgName}.svg`}
         alt="АААА КАРТИНКА НЕ ЗАГРУЗИЛАСЬ ААААА"
         className={styles.feature_image}
       />
@@ -104,7 +157,11 @@ function Comment(props: CommentProps) {
   return (
     <div className={styles.feedback}>
       <div className={styles.feedback_person}>
-        <img className={styles.feedback_person_image} alt={avatarName} src={`./Resources/Feedback/${avatarName}.jpg`} />
+        <img
+          className={styles.feedback_person_image}
+          alt={avatarName}
+          src={`./Resources/PromoPage/Feedback/${avatarName}.jpg`}
+        />
         <div className={cn(t.nunito, styles.feedback_person_name)}>{name}</div>
       </div>
       <div className={styles.feedback_description}>
@@ -115,7 +172,7 @@ function Comment(props: CommentProps) {
               className={styles.feedback_star}
               key={i}
               alt={"star"}
-              src={"./Resources/Feedback/star.svg"}
+              src={"./Resources/PromoPage/Feedback/star.svg"}
             />
           ))}
         </div>

@@ -31,7 +31,7 @@
 }
 
 .feature {
-  background: #FBFBFB;
+  background: #fbfbfb;
   box-shadow: 0 6px 40px rgb(184, 181, 255);
   border-radius: 12.9729px;
   width: 300px;
@@ -60,6 +60,7 @@
   &_wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 336px;
   }
 }
 
@@ -88,7 +89,7 @@
       width: 70px;
     }
 
-    &_name{
+    &_name {
       font-weight: 700;
       font-size: 20px;
       line-height: 27px;
@@ -107,5 +108,59 @@
     &s_container {
       display: flex;
     }
+  }
+}
+
+.aboutApp {
+  width: 532px;
+
+  &_image {
+    width: 880px;
+    height: 584px;
+    box-shadow: 0 6px 40px rgb(184, 181, 255);
+    border-radius: 20px;
+    margin-top: 16px;
+  }
+
+  &_withImage {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_wrapper {
+    margin-bottom: 360px;
+  }
+
+  &_description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.statistic {
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    background-color: $baseColor;
+    padding: 32px;
+    color: white;
+    position: relative;
+    width: 724px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    top: -64px;
+  }
+
+  &_number {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 41px;
+  }
+
+  &_description {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
   }
 }

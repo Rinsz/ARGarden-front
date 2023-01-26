@@ -6,10 +6,28 @@
   line-height: 75px;
   max-width: 650px;
 
+  &::before {
+    content: ".";
+    width: 1500px;
+    height: 1500px;
+    background-color: rgba(165, 153, 250, 0.1);
+    position: absolute;
+    color: white;
+    z-index: -1;
+    border-radius: 100%;
+    transform: translate(-55%, -80%);
+  }
+
   @media only #{$media} and ($feature: $value) {
     & {
       font-size: 36px;
       line-height: 1.3em;
+    }
+
+    &::before {
+      width: 500px;
+      height: 500px;
+      transform: translate(-50%, -60%);
     }
   }
 }
@@ -20,10 +38,26 @@
   max-width: 710px;
   margin-bottom: 80px;
 
+  &::before {
+    content: ".";
+    width: 700px;
+    height: 700px;
+    background-color: rgba(165, 153, 250, 0.1);
+    position: absolute;
+    color: white;
+    z-index: -1;
+    border-radius: 100%;
+    transform: translate(160%, -40%);
+  }
+
   @media only #{$media} and ($feature: $value) {
     & {
       font-size: 16px;
       line-height: 2em;
+    }
+
+    &::before {
+      display: none;
     }
   }
 }
@@ -76,11 +110,28 @@
     justify-content: space-between;
     margin-bottom: 336px;
 
+    &::before {
+      content: ".";
+      width: 700px;
+      height: 1000px;
+      border-radius: 300px;
+      background-color: rgba(165, 153, 250, 0.1);
+      position: absolute;
+      color: white;
+      z-index: -1;
+      transform: translate(-80%, -30%);
+    }
+
     @media only #{$media} and ($feature: $value) {
       & {
         flex-direction: column;
         gap: 20px;
         align-items: center;
+      }
+
+      &:before {
+        transform: translate(-60%, -20%);
+        height: 2000px;
       }
     }
   }

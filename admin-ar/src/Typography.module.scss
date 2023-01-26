@@ -52,3 +52,9 @@ $baseColor: #6857DD;
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
 }
+
+//Mobile
+
+$media: screen;
+$feature: max-device-width;
+$value: 900px;

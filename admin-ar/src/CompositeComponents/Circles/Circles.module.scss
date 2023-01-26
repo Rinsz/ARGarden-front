@@ -1,12 +1,21 @@
+@import "../../Typography.module";
+
 .circle {
   position: relative;
   background: rgba(165, 153, 250, 0.1);
   z-index: -1;
+  display: none;
 
   &s_wrapper {
     width: 0;
     height: 0;
     margin: 0 auto;
+
+    @media only #{$media} and ($feature: $value) {
+      & {
+        display: none;
+      }
+    }
   }
 
   &_1 {

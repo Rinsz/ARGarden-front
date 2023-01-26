@@ -50,7 +50,7 @@ export function Promo() {
       </div>
       <AboutApp />
       <Separator width={68} height={8} />
-      <div className={cn(styles.heading, t.b64)}>Отзывы пользоваталей</div>
+      <div className={cn(styles.heading, t.b64)}>Отзывы пользователей</div>
       <div className={styles.feedbacks_container}>
         <Comment
           name={"Михаил Шестеров"}
@@ -75,11 +75,13 @@ function AboutApp() {
   return (
     <div className={styles.aboutApp_wrapper}>
       <div className={styles.aboutApp_withImage}>
-        <img
-          className={styles.aboutApp_image}
-          src={"./Resources/PromoPage/AboutApp/example.jpg"}
-          alt={"Пример"}
-        />
+        <div className={styles.aboutApp_image_wrapper}>
+          <img
+            className={styles.aboutApp_image}
+            src={"./Resources/PromoPage/AboutApp/example.jpg"}
+            alt={"Пример"}
+          />
+        </div>
         <div className={styles.aboutApp}>
           <Separator width={68} height={8} />
           <div className={cn(styles.heading, t.b64)}>О приложении</div>
@@ -95,12 +97,12 @@ function AboutApp() {
       </div>
       <div className={styles.statistic_wrapper}>
         <StatisticElement number={"100"} description={"Готовых моделей"} />
-        <Separator width={2} color={"white"} />
+        <Separator width={2} color={"white"} rotatable={true} />
         <StatisticElement
           number={"100к"}
           description={"Довольных пользователей"}
         />
-        <Separator width={2} color={"white"} />
+        <Separator width={2} color={"white"} rotatable={true}/>
         <StatisticElement number={"150к"} description={"Созданных садов"} />
       </div>
     </div>

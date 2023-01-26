@@ -56,16 +56,14 @@ function Block(props: BlockProps) {
   const { heading, elements } = props;
 
   return (
-    <div className={styles.block_wrapper}>
-      <div className={styles.block}>
-        <div className={styles.heading}>{heading}</div>
-        <div className={styles.elements_wrapper}>
-          {elements.map((x, i) => (
-            <div key={i} className={styles.element}>
-              {x}
-            </div>
-          ))}
-        </div>
+    <div className={styles.block}>
+      <div className={styles.heading}>{heading}</div>
+      <div className={styles.elements_wrapper}>
+        {elements.map((x, i) => (
+          <div key={i} className={styles.element}>
+            {x}
+          </div>
+        ))}
       </div>
     </div>
   );
